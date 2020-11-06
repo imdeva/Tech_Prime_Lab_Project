@@ -19,7 +19,8 @@ $(function(){
  // 	}
 	// });
 	if(!$('#prodName').val() || !$('#prodCate').val() || !$('#prodPrice').val() || !$('#prodQuant').val() ){
-		alert("Enter all values");
+		// alert("Enter all values");
+		swal("Sorry!", "Enter All Values....!", "warning");
 		return 0;
 	}
 
@@ -37,9 +38,10 @@ $(function(){
 		contentType: 'application/json',
 		data: JSON.stringify(input_data),
 		success: function(data) {
-					alert(data["msg"])
+					swal("Good job!", "Data Added Succesfully!", "success");
+					//alert(data["msg"])
 					console.log(data)
-					window.location="/display"
+					window.location="/"
 
 		},
 		error: function(xhr) {

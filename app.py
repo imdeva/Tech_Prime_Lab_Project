@@ -37,11 +37,15 @@ def listAll():
 	return jsonify(a)
 	#return render_template('display.html',data=a)
 
-@app.route("/")
-def hello():
-	return render_template("index.html")
+# @app.route("/")
+# def hello():
+# 	return render_template("index.html")
 
 @app.route("/display")
+def hello():
+	return render_template("index.html")	
+
+@app.route("/")
 def display():
 	return render_template("display.html")
 
