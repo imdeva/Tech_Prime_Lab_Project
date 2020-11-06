@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>List Display</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./static/css/home.css">
+</head>
+
+<body >
+	<center>
+		<h1>Display Data Tables</h1>
+		<hr>
+	</center>
+
+	<div class="filter">
+		<button type="button" id="ViewRecords"> View Tables </button>
+		<button type="button" id="Add Product"> Add Product </button>
+
+	</div>
+
+	<div class="table-responsive" >
+		<table id="tableid" class="table center" style="width:800px";>
+			<thead class="thead-dark">
+				<tr>
+
+					<th scope="col">Id</th>
+					<th scope="col">Product Name</th>
+					<th scope="col">Category</th>
+					<th scope="col">Price</th>
+					<th scope="col">Quantity</th>
+
+				</tr>
+			</thead>
+			<tbody></tbody>
+
+		</table>
+	</div>
+
+</body>
+</body>
+</html>
+
+<script >
+	$(document).ready(function(){
+
+		$.ajax({
+			type:'GET',
+			url:'http://127.0.0.1:5000/list',
+			success: function(data){
+				alert("yyyyyyyyyyyyy");
+				alert(data);
+				var table_display="";
+
+				console.log(data);
+				$.each(data,function(each){
+					console.log(each)
+					table_display += '<tr>';
+					table_display += '<th scope="row">'+data[each]["id"]+'</th>';
+					table_display += '<td>'+data[each]["prodName"]+'</td>';
+					table_display += '<td>'+data[each]["category"]+'</td>';
+					table_display += '<td>'+data[each]["price"]+'</td>';
+					table_display += '<td>'+data[each]["quantity"]+'</td>';
+					table_display += '</tr>';
+
+
+				});
+				$('#tableid tbody').append(table_display);
+			}
+ 	 
+ 	});
+	});
+
+
+	
+</script>
