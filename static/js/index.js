@@ -2,7 +2,6 @@ $(function(){
 		// var $order=$('#order');
 
  $('#final').click(function() {
- alert("aaa");	
  // $.ajax({
  // 	type:'GET',
  // 	url:'http://127.0.0.1:5000/list',
@@ -19,14 +18,18 @@ $(function(){
  // 		// });
  // 	}
 	// });
+	if(!$('#prodName').val() || !$('#prodCate').val() || !$('#prodPrice').val() || !$('#prodQuant').val() ){
+		alert("Enter all values");
+		return 0;
+	}
 	
 	input_data = {
-		"product_name": $('#nm').val(),
-		"category_name": $('#nm1').val(),
-		"price": $('#nm2').val(),
-		"quantity": $('#nm3').val()
+		"product_name": $('#prodName').val(),
+		"category_name": $('#prodCate').val(),
+		"price": $('#prodPrice').val(),
+		"quantity": $('#prodQuant').val()
 	}
-alert(input_data);
+
 	$.ajax({
 		url: '/add_data',
 		method: "POST",
@@ -34,9 +37,9 @@ alert(input_data);
 		contentType: 'application/json',
 		data: JSON.stringify(input_data),
 		success: function(data) {
-
+					alert(data["msg"])
 					console.log(data)
-						
+					window.location="/display"
 
 		},
 		error: function(xhr) {

@@ -39,7 +39,6 @@ def listAll():
 
 @app.route("/")
 def hello():
-	db.create_all()
 	return render_template("index.html")
 
 @app.route("/display")
@@ -68,6 +67,7 @@ def add_data():
 	return jsonify({"msg":"added sucessfully."})
 
 if __name__ =="__main__":
+	db.create_all()
 	app.run(debug=True)
 
 
