@@ -11,23 +11,25 @@
 	<link rel="stylesheet" href="./static/css/home.css">
 </head>
 
-<body >
+<body style="background-color:#3390E5">
 	<center>
 		<h1>Display Data Tables</h1>
 		<hr>
 	</center>
 
 	<div class="filter">
-		<div class="center">
-		<button type="button" id="ViewRecords" > View Tables </button>
+		<div >
+			<a href="/display">
+		<button type="button" id="ViewRecords" class="custombutton" style="background-color:#4CAF50"> Reload </button>
+		</a>
 		<a href="/">
-		<button type="button" id="Add Product"  > Add Product </button>
+		<button type="button" id="Add Product" class="custombutton" style="background-color:#4CAF50"> Add Product </button>
 		</a>
 		</div>
 	</div>
 
-	<div class="table-responsive" >
-		<table id="tableid" class="table center" style="width:800px";>
+	<div class="table-wrapper-scroll-y my-custom-scrollbar" >
+		<table id="tableid" class="table mycustomcentre" style="width:800px ";>
 			<thead class="thead-dark">
 				<tr>
 
@@ -55,8 +57,8 @@
 			type:'GET',
 			url:'http://127.0.0.1:5000/list',
 			success: function(data){
-				alert("yyyyyyyyyyyyy");
-				alert(data);
+			//	alert("yyyyyyyyyyyyy");
+				//alert(data);
 				var table_display="";
 
 				console.log(data);

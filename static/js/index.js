@@ -22,7 +22,7 @@ $(function(){
 		alert("Enter all values");
 		return 0;
 	}
-	
+
 	input_data = {
 		"product_name": $('#prodName').val(),
 		"category_name": $('#prodCate').val(),
