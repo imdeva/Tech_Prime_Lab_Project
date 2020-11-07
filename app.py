@@ -14,10 +14,6 @@ class Product_Details(db.Model):
 	category=db.Column(db.String(80),nullable=False)
 	price=db.Column(db.Integer,nullable=False)
 	quantity=db.Column(db.Integer,nullable=False)
-	
-	# def __init__(self,prodName,email):
-	# 	self.prodName=prodName
-	# 	self.category=category
 
 @app.route("/list",methods=['GET','OPTIONS'])
 def listAll():
@@ -35,11 +31,6 @@ def listAll():
 		a.append(b)
 		print(a)
 	return jsonify(a)
-	#return render_template('display.html',data=a)
-
-# @app.route("/")
-# def hello():
-# 	return render_template("index.html")
 
 @app.route("/display")
 def hello():

@@ -20,11 +20,11 @@
 	<div class="filter">
 		<div >
 			<a href="/">
-		<button type="button" id="ViewRecords" class="custombutton" style="background-color:#4CAF50"> Reload </button>
-		</a>
-		<a href="/display">
-		<button type="button" id="Add Product" class="custombutton" style="background-color:#4CAF50"> Add Product </button>
-		</a>
+				<button type="button" id="ViewRecords" class="custombutton" style="background-color:#4CAF50"> Reload </button>
+			</a>
+			<a href="/display">
+				<button type="button" id="Add Product" class="custombutton" style="background-color:#4CAF50"> Add Product </button>
+			</a>
 		</div>
 	</div>
 
@@ -57,8 +57,7 @@
 			type:'GET',
 			url:'http://127.0.0.1:5000/list',
 			success: function(data){
-			//	alert("yyyyyyyyyyyyy");
-				//alert(data);
+				
 				var table_display="";
 
 				console.log(data);
@@ -76,8 +75,8 @@
 				});
 				$('#tableid tbody').append(table_display);
 			}
- 	 
- 	});
+			
+		});
 	});
 
 

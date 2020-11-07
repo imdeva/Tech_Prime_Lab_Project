@@ -13,32 +13,26 @@
  
 }
 .custombutton {
-color: #fff !important;
-text-transform: uppercase;
-text-decoration: none;
-background: #ed3330;
-padding: 20px;
-margin-left: 20px; 
-border-radius: 5px;
-display: inline-block;
-border: none;
-transition: all 0.4s ease 0s;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ed3330;
+  padding: 20px;
+  margin-left: 20px; 
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
 }
 
 .my-custom-scrollbar {
-position: relative;
-height: 400px;
-overflow: auto;
+  position: relative;
+  height: 400px;
+  overflow: auto;
 }
-/*th[scope=row] {
-position: -webkit-sticky;
-position: sticky;
-top: 0;
 
-
-}*/
 .table-wrapper-scroll-y {
-display: block;
+  display: block;
 }
 
 .mycustomcentre {
@@ -46,39 +40,6 @@ display: block;
   margin-right: auto;
 }
 
-/*.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-}*/
-/*table{
- position: absolute;
- z-index: 2;
- left: 50%;
- top: 50%;
- transform: translate(-50%,-50%);
- width: 60%; 
- border-collapse: collapse;
- border-spacing: 0;
- box-shadow: 0 2px 15px rgba(64,64,64,.7);
- border-radius: 12px 12px 0 0;
- overflow: hidden;
-
-}
-td , th{
- padding: 15px 20px;
- text-align: center;
- 
-
-}
-thead th {
-	position: fixed;
-	top : 0;
-}*/
 # View_Records {
   background-color: #4CAF50; /* Green */
   border: none;
